@@ -11,7 +11,9 @@ public class Order{
     }
         
     public Order(String name ){
+
         this.name = name;
+        this.items = new ArrayList<Item>();
         
     }
 
@@ -21,10 +23,10 @@ public class Order{
     public void setOrderName(String name){
         this.name = name;
     }
-    public boolean isReady(boolean ready){
-        return ready;
+    public boolean isReady(){
+        return this.ready;
     }
-    public void setReady(){
+    public void setReady(boolean ready){
         this.ready = ready;
     }
     //////////////////////
@@ -45,11 +47,11 @@ public class Order{
     }
      
     public void display(){
-        System.out.println("custmer name" + this.name);
+        System.out.println("custmer name " + getOrderName());
         for(Item item : this.items){
-            System.out.println("drip" + item.getName() + - item.getPrice());
+            System.out.println( item.getName() + " "+ item.getPrice());
         }
-        System.out.println("Total" + this.getOrderTotal());
+        System.out.println("Total " + this.getOrderTotal());
         
     }
 

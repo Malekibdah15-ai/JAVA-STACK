@@ -15,12 +15,13 @@ public class Test{
         System.out.println(" name " + coffe.getName() + " price "  + coffe.getPrice());
         System.out.println(" name " + Nescafe.getName() + " price "  + Nescafe.getPrice());
 
-        Order Malek = new Order();
+        Order Malek = new Order("malek");
         Order tareq = new Order();
         Order kamel = new Order();
 
         
         Malek.addItem(coffe);
+        Malek.addItem(Nescafe);
 
         tareq.addItem(latte);
 
