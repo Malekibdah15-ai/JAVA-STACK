@@ -4,9 +4,13 @@ public class Gorilla extends Mammol {
         super(name, energy);
 
     }
+    public Gorilla(){
+        super();
+    }
 
     public String throwSomething(){
         setEnergy(getEnergy()-5);
+        DecreaseEnregy(5);
         System.out.println(getEnergy());
         return " Gorilla animal " + getName() +  "Gorilla energy is" + getEnergy() + " it throw something ";
     }

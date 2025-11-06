@@ -7,6 +7,9 @@ public class Mammol{
         this.energy = energy;
 
     }
+    public Mammol(){
+
+    }
 
     public void setName(String name){
         this.name = name;
@@ -18,6 +21,10 @@ public class Mammol{
 
     public void setEnergy(int energy){
         this.energy = energy;
+    }
+
+    public void DecreaseEnregy(int value){
+        this.energy += value;
     }
 
     public int getEnergy(){
