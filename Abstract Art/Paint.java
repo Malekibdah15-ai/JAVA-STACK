@@ -13,12 +13,10 @@ public class Paint extends Art {
     public String getPaintType(){
         return paintType;
     }
-
     public void viewArt(){
         System.out.println("art title " + getTitle());
         System.out.println("art author " + getAuthor());
         System.out.println("art description " + getDsecription());
         System.out.println("art type " + getPaintType());
     }
-
 }
