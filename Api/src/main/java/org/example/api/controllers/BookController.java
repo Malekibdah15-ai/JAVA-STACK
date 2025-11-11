@@ -1,0 +1,28 @@
+package org.example.api.controllers;
+
+import jakarta.servlet.http.HttpSession;
+import org.example.api.models.Book;
+import org.example.api.services.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class BookController {
+
+    private final BookService bookService;
+
+    public BookController(BookService bookService) {
+        this.bookService = bookService;
+    }
+
+    @RequestMapping("/books/{id}")
+    public String index(@PathVariable("id") Long id, Model model) {
+        Book book = bookService.findBook(id);
+            model.addAttribute("book", book);
+            return "show.jsp";
+        }
+
+}
